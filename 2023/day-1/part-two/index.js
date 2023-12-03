@@ -28,8 +28,7 @@ const numbersInFullObj = {
   nine: "9",
 }
 
-// Array.from() creates an array from an object, in this case the keys of the object
-const numbersInFull = Array.from(Object.keys(numbersInFullObj))
+const numbersInFull = Object.keys(numbersInFullObj)
 
 /**
  * Return the number of firstNumber concatenated with the last
@@ -67,6 +66,7 @@ function getLineCalibrationNumber(line) {
         // console.log("currentFormedString: ", currentFormedString)
 
         let foundNumber = false
+
         for (const word of numbersInFull) {
           if (currentFormedString.includes(word)) {
             firstLineNumber = numbersInFullObj[word]
