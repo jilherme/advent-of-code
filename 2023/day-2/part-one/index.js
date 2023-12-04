@@ -1,4 +1,4 @@
-// const path = "./input-example";
+// const path = "../input-example";
 const path = "../input"
 const file = Bun.file(path)
 
@@ -7,7 +7,6 @@ const text = await file.text()
 let gameSum = 0
 
 for (const line of text.split("\n")) {
-  const isLineGamePossible = isGamePossible(line)
   if (!isGamePossible(line)) continue
   console.log(`${line}\n${isLineGamePossible}\n`)
 
